@@ -4,61 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registration Form</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
+    <div class="container">
+        <form id="signup_form">
+            <div id="form_wrapper">
+                <h2>Create Account</h2>
 
-  <form class="signup-form">
-    <h2>Create Account</h2>
+                <!-- Name Input -->
+                <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" class="fullName" placeholder="Enter your name" required>
+                </div>
 
-    <!-- Name Input -->
-    <div class="form-group">
-      <label for="fullName">Full Name</label>
-      <input type="text" class="fullName" placeholder="Enter your name" required>
+                <!-- Email Input -->
+                <div class="form-group">
+                <label for="userEmail">Email Address</label>
+                <input type="email" class="userEmail" placeholder="name@example.com" required>
+                </div>
+
+                <!-- Password Input -->
+                <div class="form-group">
+                <label for="userPass">Password</label>
+                <input type="password" clsss="userPass" placeholder="Create password" required>
+                </div>
+
+                <!-- Confirm Password Input -->
+                <div class="form-group">
+                <label for="confirmPass">Confirm Password</label>
+                <input type="password" class="confirmPass" placeholder="Confirm password" required>
+                </div>
+
+                <!-- Radio Buttons for Selection -->
+                <div class="form-group">
+                <label>Account Type:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="accountType" value="free" checked> Free</label>
+                    <label><input type="radio" name="accountType" value="premium"> Premium</label>
+                </div>
+                </div>
+
+                <!-- File Upload -->
+                <div class="form-group">
+                <label for="profilePic">Upload Profile Picture</label>
+                <input type="file" class="profilePic">
+                </div>
+
+                <!-- Textarea for Feedback -->
+                <div class="form-group">
+                <label for="referral">Where did you learn about our site?</label>
+                <textarea id="referral" rows="3" placeholder="Tell us how you found us..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submitBtn">Sign Up</button>
+            </div>
+        </form>
     </div>
-
-    <!-- Email Input -->
-    <div class="form-group">
-      <label for="userEmail">Email Address</label>
-      <input type="email" class="userEmail" placeholder="name@example.com" required>
-    </div>
-
-    <!-- Password Input -->
-    <div class="form-group">
-      <label for="userPass">Password</label>
-      <input type="password" clsss="userPass" placeholder="Create password" required>
-    </div>
-
-    <!-- Confirm Password Input -->
-    <div class="form-group">
-      <label for="confirmPass">Confirm Password</label>
-      <input type="password" class="confirmPass" placeholder="Re-enter password" required>
-    </div>
-
-    <!-- Radio Buttons for Selection -->
-    <div class="form-group">
-      <label>Account Type:</label>
-      <div class="radio-group">
-        <label><input type="radio" name="accountType" value="free" checked> Free</label>
-        <label><input type="radio" name="accountType" value="premium"> Premium</label>
-      </div>
-    </div>
-
-    <!-- File Upload -->
-    <div class="form-group">
-      <label for="profilePic">Upload Profile Picture</label>
-      <input type="file" class="profilePic">
-    </div>
-
-    <!-- Textarea for Feedback -->
-    <div class="form-group">
-      <label for="referral">Where did you learn about our site?</label>
-      <textarea id="referral" rows="3" placeholder="Tell us how you found us..."></textarea>
-    </div>
-
-    <!-- Submit Button -->
-    <button type="submit" class="submitBtn">Sign Up</button>
-  </form>
 
 </body>
 </html>
