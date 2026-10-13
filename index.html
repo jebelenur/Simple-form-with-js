@@ -8,60 +8,65 @@
 </head>
 <body>
     <div class="container">
-        <form id="signup_form">
-            <div id="form_wrapper">
-                <h2>Create Account</h2>
+        <div id="form_wrapper">
+            <h2>Create Account</h2>
 
-                <!-- Name Input -->
-                <div class="form-group">
-                <label for="fullName">Full Name</label>
-                <input type="text" class="fullName" placeholder="Enter your name" required>
-                </div>
-
-                <!-- Email Input -->
-                <div class="form-group">
-                <label for="userEmail">Email Address</label>
-                <input type="email" class="userEmail" placeholder="name@example.com" required>
-                </div>
-
-                <!-- Password Input -->
-                <div class="form-group">
-                <label for="userPass">Password</label>
-                <input type="password" clsss="userPass" placeholder="Create password" required>
-                </div>
-
-                <!-- Confirm Password Input -->
-                <div class="form-group">
-                <label for="confirmPass">Confirm Password</label>
-                <input type="password" class="confirmPass" placeholder="Confirm password" required>
-                </div>
-
-                <!-- Radio Buttons for Selection -->
-                <div class="form-group">
-                <label>Account Type:</label>
-                <div class="radio-group">
-                    <label><input type="radio" name="accountType" value="free" checked> Free</label>
-                    <label><input type="radio" name="accountType" value="premium"> Premium</label>
-                </div>
-                </div>
-
-                <!-- File Upload -->
-                <div class="form-group">
-                <label for="profilePic">Upload Profile Picture</label>
-                <input type="file" class="profilePic">
-                </div>
-
-                <!-- Textarea for Feedback -->
-                <div class="form-group">
-                <label for="referral">Where did you learn about our site?</label>
-                <textarea id="referral" rows="3" placeholder="Tell us how you found us..."></textarea>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" class="submitBtn">Sign Up</button>
+            <!-- Name Input -->
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" class="fullName" placeholder="Enter your name">
+              <span class="error" id="nameError"></span>
             </div>
-        </form>
+
+            <!-- Email Input -->
+            <div class="form-group">
+              <label for="userEmail">Email Address</label>
+              <input type="email" class="userEmail" placeholder="name@example.com">
+              <span class="error" id="emailError"></span>
+            </div>
+
+            <!-- Password Input -->
+            <div class="form-group">
+              <label for="userPass">Password</label>
+              <input type="password" class="userPass" placeholder="Create password">
+              <span class="error" id="passError"></span>
+            </div>
+
+            <!-- Confirm Password Input -->
+            <div class="form-group">
+              <label for="confirmPass">Confirm Password</label>
+              <input type="password" class="confirmPass" placeholder="Confirm password">
+              <span class="error" id="cpassError"></span>
+            </div>
+
+            <!-- Radio Buttons for Selection -->
+            <div class="form-group">
+              <label>Account Type:</label>
+              <div class="radio-group">
+                  <label><input type="radio" name="accountType" value="free" checked> Free</label>
+                  <label><input type="radio" name="accountType" value="premium"> Premium</label>
+              </div>
+            </div>
+
+            <!-- File Upload -->
+            <div class="form-group">
+              <label for="profilePic">Upload Profile Picture</label>
+              <input type="file" class="profilePic">
+              <span class="error" id="fileError"></span>
+            </div>
+
+            <!-- Textarea for Feedback -->
+            <div class="form-group">
+              <label for="feedback">Where did you learn about our site?</label>
+              <textarea class="feedback" rows="3" placeholder="Tell us how you found us..."></textarea>
+              <span class="error" id="feedbackError"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="button" class="submitBtn">Sign Up</button>
+        </div>
     </div>
 
+    <script src="./script.js"></script>
 </body>
 </html>
